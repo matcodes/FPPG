@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>f33f88c8-b01b-4788-b29e-7a20203b7cc8</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>FanDual</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\API\FanDualAPI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\BaseData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Converters\AnswerStateToColorValueConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Converters\IndexToBoolValueConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Enums\AnswerStates.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Extensions\TaskExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Models\FileFixture.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Models\FileFixtureTeam.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Models\FileFixtureInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Models\FileImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Models\FileImages.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Models\FileMetadata.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Models\FileMetadataPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Models\FileNews.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Models\FilePlayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Models\FilePlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Models\FileTeam.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\VisualCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Data\PlayerViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Pages\MainViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Panels\BasePanelViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Panels\GamePanelViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Panels\LoadingPanelViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Panels\ResultPanelViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Panels\StartPanelViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Lists\BaseListView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Lists\PlayerListView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\MainPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Panels\BasePanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Panels\GamePanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Panels\LoadingPanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Panels\ResultPanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Panels\StartPanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Data\VerticalPlayerView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Data\HorizontalPlayerView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Classes\Models\Player.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Controls\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Data\" />
+  </ItemGroup>
+</Project>
