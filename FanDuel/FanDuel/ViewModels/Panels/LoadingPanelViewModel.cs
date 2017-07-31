@@ -43,17 +43,21 @@ namespace FanDuel.ViewModels.Panels
                 Console.WriteLine(exception.Message);
                 this.IsError = true;
             }
-            finally
-            {
-                this.IsBusy = false;
-            }
         }
 
         private async Task<FilePlayers> GetData()
         {
             var filePlayers = await Task<FilePlayers>.Run(() => {
-                var result = FanDuelAPI.LoadContent();
-                return result;
+                this.IsBusy = true;
+                try
+                {
+                    var result = FanDuelAPI.LoadContent();
+                    return result;
+                }
+                finally
+                {
+                    this.IsBusy = false;
+                }
             });
             return filePlayers;
         }
