@@ -58,7 +58,7 @@ namespace FanDuel.ViewModels.Panels
             return filePlayers;
         }
 
-        private async void Reload(object parameter)
+        internal async void Reload(object parameter)
         {
             this.IsError = false;
             await this.LoadContent();

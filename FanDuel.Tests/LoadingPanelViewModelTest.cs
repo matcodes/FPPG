@@ -1,37 +1,23 @@
 ﻿using System;
-using System.IO;
-using System.Linq;
-using NUnit.Framework;
-using Xamarin.UITest;
-using Xamarin.UITest.Queries;
-using System.Threading.Tasks;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using FanDuel.ViewModels.Pages;
+using System.Threading.Tasks;
 
 namespace FanDuel.Tests
 {
-    [TestFixture(Platform.Android)]
-    [TestFixture(Platform.iOS)]
-    public class Tests
+    #region LoadingPanelViewModelTest
+    [TestClass]
+    public class LoadingPanelViewModelTest
     {
-        IApp app;
-        Platform platform;
+        private MainViewModel _mainViewModel;
 
-        private MainViewModel _mainViewModel = null;
-
-        public Tests(Platform platform)
+        [TestInitialize]
+        public void TestInitialize()
         {
-            this.platform = platform;
-        }
-
-        [SetUp]
-        public void BeforeEachTest()
-        {
-            app = AppInitializer.StartApp(platform);
-
             _mainViewModel = new MainViewModel();
         }
 
-        [Test]
+        [TestMethod]
         public async Task InitializeTest()
         {
             await _mainViewModel.LoadingPanelViewModel.Initialize();
@@ -41,7 +27,8 @@ namespace FanDuel.Tests
             Assert.IsTrue(_mainViewModel.FilePlayers != null);
             Assert.IsTrue(_mainViewModel.FilePlayers.Players != null);
             Assert.IsTrue(_mainViewModel.FilePlayers.Players.Length > 0);
+            Assert.IsTrue(_mainViewModel.State == AppConstants.MAIN_PAGE_STATE_START);
         }
     }
+    #endregion
 }
-

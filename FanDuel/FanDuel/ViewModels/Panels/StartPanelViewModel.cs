@@ -11,8 +11,8 @@ namespace FanDuel.ViewModels.Panels
     public class StartPanelViewModel : BasePanelViewModel
     {
         #region Static members
-        private static readonly int MIN_PLAYERS_COUNT = 2;
-        private static readonly int MAX_PLAYERS_COUNT = 5;
+        public static readonly int MIN_PLAYERS_COUNT = 2;
+        public static readonly int MAX_PLAYERS_COUNT = 5;
 
         private static readonly string PLAYERS_COUNT_PROPERTY_NAME = "PlayersCount";
         #endregion
